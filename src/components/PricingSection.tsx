@@ -28,32 +28,32 @@ const PricingSection = () => {
 
   const plans = [
     {
-      name: "Solo OTT Saver",
+      name: "Single Platform Match",
       price: "$3.99",
       period: "month",
-      description: "For users who want to split only one OTT platform",
+      description: "For users who want to split the cost of just one OTT platform (e.g., Netflix only). They'll be matched with others wanting the same, in their country.",
       features: [
-        "Split Netflix OR Prime OR Hotstar OR HBO Max",
+        "Split one platform only (Netflix OR Prime OR Hotstar OR HBO Max)",
         "Verified, country-based user matching",
-        "Private Discord/Telegram group access",
+        "Access to private Discord/Telegram group for sharing coordination",
         "Automated re-matching if group breaks",
-        "Average savings: $6–15/month",
-        "No account sharing - coordinate with others"
+        "You manage your own subscription or coordinate with others",
+        "No account sharing - you stay in control"
       ],
       popular: false
     },
     {
-      name: "Multi OTT Max",
+      name: "Multi-Platform Match",
       price: "$5.99",
       period: "month",
-      description: "Match users across 2 or more platforms",
+      description: "For users who want to split 2–4 services (e.g., Netflix + Prime + Hotstar). They'll be placed in multiple verified groups.",
       features: [
-        "Split 2+ platforms (Netflix + Prime + more)",
-        "Premium matching for multiple services",
+        "Match across multiple platforms (Netflix + Prime + more)",
+        "Access to premium matching for multiple services",
         "Country-level, precise match algorithm",
         "Verified user system via payment and ID",
-        "Private group coordination and re-matching",
-        "Average savings: $25–45/month"
+        "We help you manage multiple groups if needed",
+        "Auto re-match if a group ends"
       ],
       popular: true
     }
@@ -124,6 +124,13 @@ const PricingSection = () => {
                         : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                     }`}
                     size="lg"
+                    onClick={() => {
+                      if (plan.name === "Single Platform Match") {
+                        window.location.href = "/single-platform";
+                      } else {
+                        window.location.href = "/multi-platform";
+                      }
+                    }}
                   >
                     Get Started
                   </Button>

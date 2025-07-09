@@ -56,10 +56,10 @@ const LegalSection = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-              Built to Stay <span className="bg-gradient-to-r from-accent to-red-400 bg-clip-text text-transparent">100% Legal</span>
+              <span className="bg-gradient-to-r from-accent to-red-400 bg-clip-text text-transparent">Legally Sound.</span> Transparently Built. Designed for Shared Savings.
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Transparency and legal compliance are at the core of everything we do
+              We don't sell streaming accounts. We simply help verified users find others in their country to legally split the cost of family plans. 100% compliant. 0% shady.
             </p>
           </div>
 

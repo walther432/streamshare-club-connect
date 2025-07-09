@@ -1,5 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import netflixLogo from "@/assets/netflix-logo.png";
+import primeVideoLogo from "@/assets/prime-video-logo.png";
+import hotstarLogo from "@/assets/hotstar-logo.png";
+import hboMaxLogo from "@/assets/hbo-max-logo.svg";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,10 +13,10 @@ const HeroSection = () => {
   }, []);
 
   const platforms = [
-    { name: "Netflix", logo: "https://logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png" },
-    { name: "Prime Video", logo: "https://logos-world.net/wp-content/uploads/2021/02/Amazon-Prime-Video-Logo.png" },
-    { name: "Hotstar", logo: "https://logos-world.net/wp-content/uploads/2020/06/Disney-Hotstar-Logo.png" },
-    { name: "HBO Max", logo: "https://logos-world.net/wp-content/uploads/2020/06/HBO-Max-Logo.png" }
+    { name: "Netflix", logo: netflixLogo },
+    { name: "Prime Video", logo: primeVideoLogo },
+    { name: "Hotstar", logo: hotstarLogo },
+    { name: "HBO Max", logo: hboMaxLogo }
   ];
 
   return (
@@ -59,7 +63,7 @@ const HeroSection = () => {
             <p className="text-sm text-muted-foreground mb-8 uppercase tracking-wider font-medium">
               Supported Platforms
             </p>
-            <div className="platform-logos max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto items-center justify-items-center">
               {platforms.map((platform, index) => (
                 <div 
                   key={platform.name}
@@ -70,8 +74,9 @@ const HeroSection = () => {
                 >
                   <img 
                     src={platform.logo} 
-                    alt={platform.name}
-                    className="h-12 md:h-16 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    alt={`${platform.name} logo`}
+                    className="h-10 md:h-14 lg:h-16 w-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    loading="lazy"
                   />
                 </div>
               ))}
