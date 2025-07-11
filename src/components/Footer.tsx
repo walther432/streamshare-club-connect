@@ -9,9 +9,7 @@ const Footer = () => {
       { name: "FAQ", href: "#" }
     ],
     support: [
-      { name: "Contact Us", href: "mailto:support@streamshareclub.com" },
-      { name: "Help Center", href: "#" },
-      { name: "Community", href: "#" }
+      { name: "Contact Us", href: "mailto:support@streamshareclub.com" }
     ]
   };
 
@@ -101,7 +99,7 @@ const Footer = () => {
           {/* Bottom bar */}
           <div className="border-t border-border mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-              <p>© 2024 StreamShare Club. All rights reserved.</p>
+              <p>© 2025 StreamShare Club. All rights reserved.</p>
               <p className="mt-4 md:mt-0 max-w-md text-center md:text-right">
                 StreamShare Club is not affiliated with Netflix, Prime Video, Hotstar, or HBO Max. All trademarks belong to their respective owners. We only connect users who wish to coordinate sharing legally.
               </p>
