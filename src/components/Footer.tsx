@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 const Footer = () => {
   const footerLinks = {
     legal: [
-      { name: "Terms of Service", href: "#" },
+      { name: "Terms of Service", href: "/terms-of-service" },
       { name: "Privacy Policy", href: "#" },
       { name: "Disclaimer", href: "#" },
       { name: "FAQ", href: "#" }
