@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import SinglePlatformMatch from "./pages/SinglePlatformMatch";
 import MultiPlatformMatch from "./pages/MultiPlatformMatch";
 import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +24,8 @@ const App = () => (
           <Route path="/single-platform" element={<SinglePlatformMatch />} />
           <Route path="/multi-platform" element={<MultiPlatformMatch />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/faq" element={<FAQ />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

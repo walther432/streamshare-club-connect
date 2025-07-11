@@ -4,9 +4,9 @@ const Footer = () => {
   const footerLinks = {
     legal: [
       { name: "Terms of Service", href: "/terms-of-service" },
-      { name: "Privacy Policy", href: "#" },
+      { name: "Privacy Policy", href: "/privacy-policy" },
       { name: "Disclaimer", href: "#" },
-      { name: "FAQ", href: "#" }
+      { name: "FAQ", href: "/faq" }
     ],
     support: [
       { name: "Contact Us", href: "mailto:support@streamshareclub.com" }
