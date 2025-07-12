@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +21,7 @@ const TermsOfService = () => {
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Button>
-            <h1 className="text-2xl font-bold">Terms of Service</h1>
+            <h1 className="text-2xl font-bold">📜 Terms of Service</h1>
           </div>
         </div>
       </header>
@@ -29,127 +30,162 @@ const TermsOfService = () => {
       <main className="container mx-auto px-6 lg:px-8 py-12 max-w-4xl">
         <div className="prose prose-invert max-w-none">
           
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">1. Service Description</h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              StreamShare Club operates as a private social community platform that connects like-minded individuals interested in cost-effective digital entertainment solutions. We provide access to exclusive Discord/Telegram communities where members can network, share experiences, and coordinate personal financial decisions.
+          <div className="mb-8">
+            <p className="text-lg text-muted-foreground">
+              <strong className="text-foreground">Effective Date:</strong> 12th July, 2025
             </p>
+            <p className="text-muted-foreground leading-relaxed mt-4">
+              Welcome to StreamShare Club — a private platform for coordinating digital subscription cost-sharing in a compliant, transparent, and community-driven manner. Please read these Terms carefully before using our services.
+            </p>
+          </div>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">1. Service Overview</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              StreamShare Club is a private online platform that connects individuals looking to share the cost of digital subscriptions in a legally compliant and community-managed environment. Our services include:
+            </p>
+            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+              <li>Telegram-based community management</li>
+              <li>Region-based group coordination</li>
+              <li>Automated subscription payment facilitation via smart escrow</li>
+              <li>Support for safe, secure and transparent participation</li>
+            </ul>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-foreground">2. Community Purpose</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Our platform facilitates social networking among budget-conscious consumers who wish to:
+              Our platform helps members:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-              <li>Share experiences about digital subscription services</li>
-              <li>Network with geographically similar individuals</li>
-              <li>Discuss cost-saving strategies and financial planning</li>
-              <li>Build communities around shared interests in digital entertainment</li>
+              <li>Discover and join regional subscription-sharing groups</li>
+              <li>Coordinate group purchases in a legally neutral and compliant manner</li>
+              <li>Use smart escrow tools to manage shared payments</li>
+              <li>Connect with others who value ethical cost optimization</li>
             </ul>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">3. What We Do NOT Provide</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">3. What We Do Not Provide</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              StreamShare Club explicitly DOES NOT:
+              To maintain full compliance and white-label status, StreamShare Club does NOT:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-              <li>Provide, manage, or distribute any subscription service credentials</li>
-              <li>Access, store, or handle any third-party account passwords</li>
-              <li>Facilitate, encourage, or assist in violation of any service provider's terms</li>
-              <li>Guarantee any specific outcomes from community interactions</li>
-              <li>Mediate disputes between community members regarding private arrangements</li>
+              <li>Sell or resell digital subscriptions</li>
+              <li>Provide or manage login credentials for any third-party service</li>
+              <li>Store, transmit, or access user-submitted credentials</li>
+              <li>Violate or encourage violation of any digital platform's Terms of Use</li>
+              <li>Act as a subscription broker or reseller</li>
             </ul>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-foreground">4. Member Responsibilities</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Members acknowledge and agree that:
+              By using StreamShare Club, all members agree that:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-              <li>All coordination activities occur independently within community channels</li>
-              <li>Members are solely responsible for their own subscription decisions and arrangements</li>
-              <li>Any sharing of credentials or accounts is done at member's own risk and discretion</li>
-              <li>Members must comply with all applicable laws and third-party service terms</li>
-              <li>StreamShare Club bears no responsibility for member actions outside our platform</li>
+              <li>Participation is voluntary and community-coordinated</li>
+              <li>Payments are submitted into an automated escrow mechanism only</li>
+              <li>No user should directly share or solicit credentials outside escrow-approved channels</li>
+              <li>Any decision to join a group is made at the user's own discretion and risk</li>
+              <li>They will comply with all applicable laws and digital platform policies</li>
+              <li>They will only provide accurate geographic and identity details for fair matching</li>
             </ul>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-foreground">5. Community Guidelines</h2>
-            <div className="space-y-3 text-muted-foreground">
-              <p><strong className="text-foreground">Respectful Communication:</strong> Maintain professional discourse in all interactions</p>
-              <p><strong className="text-foreground">Privacy Protection:</strong> Never share personal financial information in public channels</p>
-              <p><strong className="text-foreground">Independent Decision Making:</strong> All subscription choices are personal decisions</p>
-              <p><strong className="text-foreground">Compliance:</strong> Members must adhere to all applicable laws and service terms</p>
-              <p><strong className="text-foreground">Geographic Accuracy:</strong> Provide accurate location information for community matching</p>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">6. Subscription Terms</h2>
-            <div className="space-y-3 text-muted-foreground">
-              <p><strong className="text-foreground">Monthly Billing:</strong> Membership fees are charged monthly in advance</p>
-              <p><strong className="text-foreground">Cancellation Policy:</strong> Members may cancel anytime with 30-day notice</p>
-              <p><strong className="text-foreground">Refund Policy:</strong> No refunds for partial month usage</p>
-              <p><strong className="text-foreground">Price Changes:</strong> 30-day advance notice for any fee modifications</p>
-              <p><strong className="text-foreground">Account Suspension:</strong> Non-payment results in immediate community access suspension</p>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">7. Data Protection & Privacy</h2>
-            <div className="space-y-3 text-muted-foreground">
-              <p><strong className="text-foreground">Limited Data Collection:</strong> We collect only essential information for community matching</p>
-              <p><strong className="text-foreground">No Financial Data:</strong> We do not store or access any subscription service credentials</p>
-              <p><strong className="text-foreground">Geographic Matching:</strong> Location data used solely for community organization</p>
-              <p><strong className="text-foreground">Communication Privacy:</strong> Private community discussions are not monitored</p>
-              <p><strong className="text-foreground">Third-Party Independence:</strong> We maintain no relationships with subscription service providers</p>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">8. Limitation of Liability</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              StreamShare Club's liability is limited to the monthly membership fee. We are not responsible for:
+              To protect every user, the following standards must be maintained:
+            </p>
+            <div className="space-y-3 text-muted-foreground">
+              <p><strong className="text-foreground">Respectful Behavior:</strong> Be courteous and constructive at all times</p>
+              <p><strong className="text-foreground">Privacy First:</strong> Do not share financial or sensitive personal data in group chats</p>
+              <p><strong className="text-foreground">No Credential Sharing:</strong> Never exchange login details directly</p>
+              <p><strong className="text-foreground">One Region, One Identity:</strong> Do not impersonate users or falsify region/state</p>
+              <p><strong className="text-foreground">Leave Quietly, Rejoin Respectfully:</strong> Escrow exits are processed respectfully</p>
+            </div>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">6. Subscription Escrow & Payment</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              All payments are coordinated via a secure escrow mechanism. Users agree to:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-              <li>Actions taken by community members</li>
-              <li>Disputes arising from member interactions</li>
-              <li>Account suspensions or terminations by third-party services</li>
-              <li>Financial losses from subscription arrangements</li>
-              <li>Technical issues with third-party platforms (Discord/Telegram)</li>
+              <li>Deposit monthly or annual share into escrow (depending on the group plan)</li>
+              <li>Only receive access when full group payments are confirmed</li>
+              <li>Automatic monthly release from escrow to fund subscription renewals</li>
+              <li>No manual payment transfers are allowed between users</li>
+              <li>StreamShare Club never directly collects or redistributes payments</li>
             </ul>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">9. Intellectual Property</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">7. Cancellation & Refund Policy</h2>
             <div className="space-y-3 text-muted-foreground">
-              <p><strong className="text-foreground">Platform Ownership:</strong> StreamShare Club owns all platform technology and branding</p>
-              <p><strong className="text-foreground">Community Content:</strong> Members retain ownership of their contributions</p>
-              <p><strong className="text-foreground">Usage Rights:</strong> Members grant limited rights for community platform operation</p>
-              <p><strong className="text-foreground">Brand Protection:</strong> Unauthorized use of StreamShare Club branding is prohibited</p>
+              <p><strong className="text-foreground">Cancel Anytime:</strong> Users can exit a group with 7-day notice (next cycle)</p>
+              <p><strong className="text-foreground">No Partial Refunds:</strong> Once escrow disburses, no refunds are processed</p>
+              <p><strong className="text-foreground">Failed Renewal:</strong> If not enough users renew, the escrow halts payment and users are refunded unused portions automatically</p>
             </div>
           </section>
 
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">10. Termination</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">8. Data & Privacy Protection</h2>
+            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+              <li>We collect minimal data: name, region, email (optional), and Telegram ID</li>
+              <li>We do NOT store: financial details, credentials, passwords</li>
+              <li>Group matches are geographic only, never based on personal identifiers</li>
+              <li>Your chats are private: No moderation or logging inside Telegram groups</li>
+            </ul>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">9. Limitation of Liability</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Either party may terminate membership:
+              StreamShare Club is a neutral coordinating platform. We are not responsible for:
             </p>
+            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+              <li>Platform bans or suspensions from third-party services</li>
+              <li>Disputes between members (although we aim to minimize them)</li>
+              <li>Payment processing errors caused by third-party services</li>
+              <li>Downtime or service interruptions due to Telegram or subscription platforms</li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed mt-4">
+              Our total liability is limited to the amount of your most recent monthly subscription fee.
+            </p>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">10. Intellectual Property</h2>
+            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+              <li>All branding, logos, bots, and platform IP belong to StreamShare Club</li>
+              <li>User-submitted content (e.g., feedback or group chats) remains yours</li>
+              <li>You may not use our brand or system without written permission</li>
+            </ul>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">11. Termination</h2>
             <div className="space-y-3 text-muted-foreground">
-              <p><strong className="text-foreground">Member Termination:</strong> Cancel anytime with account closure</p>
-              <p><strong className="text-foreground">Platform Termination:</strong> For violation of community guidelines or non-payment</p>
-              <p><strong className="text-foreground">Effect of Termination:</strong> Immediate loss of community access</p>
-              <p><strong className="text-foreground">Data Retention:</strong> Account data deleted within 30 days of termination</p>
+              <p><strong className="text-foreground">Voluntary Exit:</strong> Cancel via the bot or dashboard at any time</p>
+              <p><strong className="text-foreground">Breach-Based Termination:</strong> We may remove users for guideline violations</p>
+              <p><strong className="text-foreground">Immediate Access Loss:</strong> Once terminated, community access ends</p>
+              <p><strong className="text-foreground">Data Deletion:</strong> Your data is purged within 30 days unless required for legal audit</p>
             </div>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">12. Contact & Dispute Resolution</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              For questions or disputes, please contact us via Telegram or our support email. All disputes are resolved via binding arbitration under [Indian Arbitration Act or your chosen neutral law].
+            </p>
           </section>
 
           <div className="mt-16 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              Last updated: January 2025
+              Last updated: July 12, 2025
             </p>
           </div>
         </div>
