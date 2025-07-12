@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import netflixLogo from "@/assets/netflix-logo.png";
@@ -43,8 +44,8 @@ const HeroSection = () => {
             Match with verified users in your country to split Netflix, Prime Video, Hotstar, or HBO Max — and save monthly.
           </p>
 
-          {/* CTA Button */}
-          <div className={`mb-16 transition-all duration-1000 delay-400 ${
+          {/* CTA Buttons */}
+          <div className={`mb-16 flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <Button 
@@ -53,6 +54,14 @@ const HeroSection = () => {
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
             >
               See Pricing Plans
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="text-lg px-8 py-4 font-semibold border-2 hover:bg-secondary/20"
+              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Start Matching
             </Button>
           </div>
 
