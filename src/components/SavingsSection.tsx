@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 
 const SavingsSection = () => {
@@ -26,27 +27,27 @@ const SavingsSection = () => {
   const platforms = [
     {
       name: "Netflix (4K)",
-      officialPrice: "$19.99",
-      sharedPrice: "$5.00",
-      savings: "$14.99"
+      officialPrice: "$24.99",
+      sharedPrice: "$6.25",
+      savings: "$18.74"
     },
     {
       name: "Prime Video",
-      officialPrice: "$14.99",
-      sharedPrice: "$3.75",
-      savings: "$11.24"
+      officialPrice: "$8.99",
+      sharedPrice: "$2.25",
+      savings: "$6.74"
     },
     {
-      name: "Hotstar",
-      officialPrice: "$8.33",
-      sharedPrice: "$2.08",
-      savings: "$6.25"
+      name: "JioHotstar",
+      officialPrice: "₹299 (~$3.59)",
+      sharedPrice: "~$0.90",
+      savings: "~$2.69"
     },
     {
       name: "HBO Max",
-      officialPrice: "$14.99",
-      sharedPrice: "$3.75",
-      savings: "$11.24"
+      officialPrice: "$20.99",
+      sharedPrice: "$5.25",
+      savings: "$15.74"
     }
   ];
 
@@ -74,8 +75,8 @@ const SavingsSection = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-secondary/50 border-b border-border">
               <div className="font-semibold text-sm">Platform</div>
               <div className="font-semibold text-sm">Official Price</div>
-              <div className="font-semibold text-sm">Price per User</div>
-              <div className="font-semibold text-sm text-accent">Monthly Savings</div>
+              <div className="font-semibold text-sm">Per‑User Cost (÷4)</div>
+              <div className="font-semibold text-sm text-accent">Monthly Savings vs Full (÷4)</div>
             </div>
 
             {/* Table rows */}
@@ -113,7 +114,7 @@ const SavingsSection = () => {
                 Total Potential Savings
               </div>
               <div className="text-3xl font-bold">
-                Up to $43.72/month
+                Up to $43.91/month
               </div>
               <div className="text-sm opacity-90">
                 When splitting all 4 platforms
