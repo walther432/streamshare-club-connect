@@ -44,13 +44,13 @@ const HeroSection = () => {
             Match with verified users in your country to split Netflix, Prime Video, Hotstar, or HBO Max — and save monthly.
           </p>
 
-          {/* CTA Button */}
-          <div className={`mb-16 flex justify-center transition-all duration-1000 delay-400 ${
+          {/* Centered CTA Button */}
+          <div className={`mb-16 transition-all duration-1000 delay-400 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <Button 
               size="lg" 
-              className="btn-premium text-lg px-8 py-4 font-semibold"
+              className="btn-premium text-lg px-8 py-4 font-semibold mx-auto"
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Start Matching
