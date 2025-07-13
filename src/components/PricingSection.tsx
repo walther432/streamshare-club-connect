@@ -4,10 +4,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const PricingSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,14 +39,10 @@ const PricingSection = () => {
       features: [
         "Community Access for One Platform - Join discussions focused on single platform cost optimization (Netflix OR Prime OR Hotstar OR HBO Max)",
         "Verified Country-Based Member Matching - Connect with verified community members in your country through our matching algorithm",
-        "Private Community Channel Access - Access to exclusive Discord/Telegram groups for networking and discussion coordination",
-        "Automated Re-Matching Service - If your discussion group becomes inactive, automatic matching to new active community groups",
-        "Independent Community Networking - Connect with like-minded individuals to discuss and coordinate cost-saving strategies independently",
-        "Educational Resources - Access to guides, tips, and educational content about subscription cost optimization",
-        "Member Verification System - All community members verified through payment and ID to ensure quality discussions",
-        "24/7 Bot Support - Automated community management and member support through our Telegram bot"
+        "Private Community Channel Access - Access to exclusive Discord/Telegram groups for networking and discussion coordination"
       ],
-      popular: false
+      popular: false,
+      planType: "basic-global"
     },
     {
       name: "Premium Plan",
@@ -54,16 +52,10 @@ const PricingSection = () => {
       features: [
         "Multi-Platform Community Access - Join discussions across multiple platforms (Netflix + Prime + Hotstar + HBO Max + more)",
         "Advanced Geographic Matching - Premium country-level matching algorithm for better regional community connections",
-        "Multiple Community Group Access - Participate in several platform-specific community groups simultaneously",
-        "Priority Re-Matching Service - Faster automated re-matching to new active groups when communities become inactive",
-        "Enhanced Member Verification - Premium verification system ensuring highest quality community members",
-        "Advanced Educational Content - Premium guides, cost optimization strategies, and financial planning resources",
-        "Community Coordination Tools - Enhanced bot features for better group communication and coordination",
-        "Priority Customer Support - Faster response times for platform-related questions and technical support",
-        "Cross-Platform Analytics - Insights into cost-saving opportunities across multiple subscription services",
-        "Exclusive Premium Features - Early access to new community features and platform updates"
+        "Multiple Community Group Access - Participate in several platform-specific community groups simultaneously"
       ],
-      popular: true
+      popular: true,
+      planType: "premium-global"
     }
   ];
 
@@ -76,14 +68,10 @@ const PricingSection = () => {
       features: [
         "Community Access for One Platform - Join discussions focused on single platform cost optimization (Netflix OR Prime OR Hotstar OR HBO Max)",
         "Verified Country-Based Member Matching - Connect with verified community members in your country through our matching algorithm",
-        "Private Community Channel Access - Access to exclusive Discord/Telegram groups for networking and discussion coordination",
-        "Automated Re-Matching Service - If your discussion group becomes inactive, automatic matching to new active community groups",
-        "Independent Community Networking - Connect with like-minded individuals to discuss and coordinate cost-saving strategies independently",
-        "Educational Resources - Access to guides, tips, and educational content about subscription cost optimization",
-        "Member Verification System - All community members verified through payment and ID to ensure quality discussions",
-        "24/7 Bot Support - Automated community management and member support through our Telegram bot"
+        "Private Community Channel Access - Access to exclusive Discord/Telegram groups for networking and discussion coordination"
       ],
-      popular: false
+      popular: false,
+      planType: "basic-indian"
     },
     {
       name: "Multi-Platform Match",
@@ -93,16 +81,10 @@ const PricingSection = () => {
       features: [
         "Multi-Platform Community Access - Join discussions across multiple platforms (Netflix + Prime + Hotstar + HBO Max + more)",
         "Advanced Geographic Matching - Premium country-level matching algorithm for better regional community connections",
-        "Multiple Community Group Access - Participate in several platform-specific community groups simultaneously",
-        "Priority Re-Matching Service - Faster automated re-matching to new active groups when communities become inactive",
-        "Enhanced Member Verification - Premium verification system ensuring highest quality community members",
-        "Advanced Educational Content - Premium guides, cost optimization strategies, and financial planning resources",
-        "Community Coordination Tools - Enhanced bot features for better group communication and coordination",
-        "Priority Customer Support - Faster response times for platform-related questions and technical support",
-        "Cross-Platform Analytics - Insights into cost-saving opportunities across multiple subscription services",
-        "Exclusive Premium Features - Early access to new community features and platform updates"
+        "Multiple Community Group Access - Participate in several platform-specific community groups simultaneously"
       ],
-      popular: true
+      popular: true,
+      planType: "premium-indian"
     }
   ];
 
@@ -157,15 +139,7 @@ const PricingSection = () => {
                   : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
               }`}
               size="lg"
-              onClick={() => {
-                if (isIndian) {
-                  if (plan.name === "Single Platform Match") {
-                    window.location.href = "/single-platform";
-                  } else {
-                    window.location.href = "/multi-platform";
-                  }
-                }
-              }}
+              onClick={() => navigate(`/plan-details/${plan.planType}`)}
             >
               Get Started
             </Button>
