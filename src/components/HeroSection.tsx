@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import netflixLogo from "@/assets/netflix-logo.png";
@@ -76,7 +77,11 @@ const HeroSection = () => {
                   <img 
                     src={platform.logo} 
                     alt={`${platform.name} logo`}
-                    className="h-10 md:h-14 lg:h-16 w-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className={`${
+                      platform.name === "HBO Max" 
+                        ? "h-12 md:h-16 lg:h-20" 
+                        : "h-10 md:h-14 lg:h-16"
+                    } w-auto object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300`}
                     loading="lazy"
                   />
                 </div>
@@ -104,3 +109,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
