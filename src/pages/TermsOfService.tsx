@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const TermsOfService = () => {
@@ -9,468 +8,325 @@ const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-border bg-card">
-        <div className="container mx-auto px-6 lg:px-8 py-4">
-          <div className="flex items-center gap-4">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => navigate("/")}
-              className="flex items-center gap-2"
+      <header className="bg-card border-b border-border">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Button 
+              variant="ghost" 
+              onClick={() => navigate('/')}
+              className="text-muted-foreground hover:text-foreground"
             >
-              <ArrowLeft className="h-4 w-4" />
-              Back to Home
+              ← Back to Home
             </Button>
-            <h1 className="text-2xl font-bold">📜 Terms of Service</h1>
+            <h1 className="text-2xl font-bold">Terms of Service</h1>
+            <div className="w-24"></div> {/* Spacer for centering */}
           </div>
         </div>
       </header>
 
       {/* Content */}
-      <main className="container mx-auto px-6 lg:px-8 py-12 max-w-4xl">
-        <div className="prose prose-invert max-w-none">
+      <main className="container mx-auto px-6 py-12 max-w-4xl">
+        <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
           
-          <div className="mb-8">
-            <p className="text-lg text-muted-foreground">
-              <strong className="text-foreground">Effective Date:</strong> July 12, 2025
-            </p>
-            <p className="text-lg text-muted-foreground">
-              <strong className="text-foreground">Last Updated:</strong> July 12, 2025
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold mb-4">StreamShare Club - Terms of Service</h1>
+            <p className="text-muted-foreground">
+              <strong>Effective Date:</strong> July 12, 2025<br />
+              <strong>Last Updated:</strong> July 12, 2025
             </p>
           </div>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">1. PLATFORM DEFINITION</h2>
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Introduction</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              StreamShare Club is a <strong className="text-foreground">private social networking and community platform</strong> that connects individuals with shared interests in digital subscription cost optimization and financial planning. We operate exclusively as a <strong className="text-foreground">community introduction service</strong> similar to other social platforms like Discord servers, Reddit communities, or Facebook groups.
+              Welcome to StreamShare Club, a community networking platform that facilitates connections between individuals interested in coordinating legal sharing of streaming service group/family plans. These Terms of Service ("Terms") govern your use of our community platform and related services.
             </p>
+            <div className="bg-accent/10 border border-accent/20 rounded-lg p-6 my-6">
+              <p className="text-sm leading-relaxed">
+                <strong>Important:</strong> StreamShare Club operates exclusively as a community introduction and networking platform. We do not manage subscriptions, handle payments to streaming services, or control any third-party accounts. All streaming arrangements are independent decisions between community members.
+              </p>
+            </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">2. SERVICE SCOPE - WHAT WE ARE</h2>
+          <section>
+            <h2 className="text-2xl font-bold mb-4">1. Platform Definition and Service Scope</h2>
             
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Community Networking Platform Only:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>We provide Telegram-based community access and introductions</li>
-                <li>We facilitate geographic matching between like-minded individuals</li>
-                <li>We offer discussion forums focused on subscription cost optimization</li>
-                <li>We maintain private community spaces for financial planning discussions</li>
-                <li>We operate automated bots for member verification and community management</li>
-              </ul>
-            </div>
+            <h3 className="text-xl font-semibold mb-3">What StreamShare Club Is:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Community networking platform</strong> for meeting like-minded individuals interested in cost-sharing</li>
+              <li><strong>Introduction service</strong> connecting members with similar geographic locations and preferences</li>
+              <li><strong>Educational resource</strong> providing information about legal streaming plan sharing</li>
+              <li><strong>Communication facilitator</strong> through Telegram-based community channels and matching</li>
+            </ul>
 
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Educational and Social Purpose:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Teaching cost-saving strategies and financial literacy</li>
-                <li>Providing networking opportunities for budget-conscious individuals</li>
-                <li>Creating discussion spaces for digital subscription market analysis</li>
-                <li>Facilitating knowledge sharing about cost optimization techniques</li>
+            <h3 className="text-xl font-semibold mb-3">What StreamShare Club is NOT:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Subscription management service</strong> - We do not create, manage, or control any streaming accounts</li>
+              <li><strong>Payment processor for streaming services</strong> - We do not handle payments to Netflix, Disney+, or other platforms</li>
+              <li><strong>Account credential handler</strong> - We never access or store streaming service login information</li>
+              <li><strong>Streaming service reseller</strong> - We do not sell or provide access to streaming content</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">2. Service Limitations and Disclaimers</h2>
+            
+            <h3 className="text-xl font-semibold mb-3">Platform Limitations:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>No guarantee of matches</strong> - We cannot guarantee you will find compatible sharing partners</li>
+              <li><strong>No control over member arrangements</strong> - All sharing agreements are solely between members</li>
+              <li><strong>No liability for sharing outcomes</strong> - We are not responsible for any disputes or issues between members</li>
+              <li><strong>Geographic limitations</strong> - Service availability depends on local laws and member presence</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold mb-3">Important Disclaimers:</h3>
+            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-6">
+              <ul className="list-disc list-inside text-sm space-y-2">
+                <li>StreamShare Club does not provide streaming service subscriptions or access</li>
+                <li>We do not guarantee the reliability or behavior of community members</li>
+                <li>All arrangements between members are independent of StreamShare Club</li>
+                <li>Members must comply with all applicable streaming service terms and local laws</li>
               </ul>
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">3. ABSOLUTE SERVICE LIMITATIONS - WHAT WE ARE NOT</h2>
+          <section>
+            <h2 className="text-2xl font-bold mb-4">3. Member Responsibilities</h2>
+            
+            <h3 className="text-xl font-semibold mb-3">Legal Compliance:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Adhere to streaming platform terms</strong> - Ensure all sharing arrangements comply with the terms of service of Netflix, Disney+, and other platforms</li>
+              <li><strong>Follow local laws</strong> - Comply with all applicable laws in your jurisdiction regarding digital content sharing</li>
+              <li><strong>Respect geographic restrictions</strong> - Do not circumvent regional content restrictions or licensing agreements</li>
+              <li><strong>Maintain account security</strong> - Protect login credentials and personal information</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold mb-3">Community Responsibilities:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Honest communication</strong> - Provide accurate information about your location and sharing preferences</li>
+              <li><strong>Respectful behavior</strong> - Treat all community members with respect and professionalism</li>
+              <li><strong>Timely communication</strong> - Respond to messages and arrangements in a reasonable timeframe</li>
+              <li><strong>Financial responsibility</strong> - Honor any payment arrangements made with other members</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">4. Community Guidelines</h2>
+            
+            <h3 className="text-xl font-semibold mb-3">Prohibited Activities:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Fraudulent behavior</strong> - No misrepresentation of identity, location, or intentions</li>
+              <li><strong>Spam or harassment</strong> - No unwanted messages, spam, or harassment of other members</li>
+              <li><strong>Illegal activities</strong> - No promotion of piracy, account theft, or other illegal activities</li>
+              <li><strong>Commercial abuse</strong> - No using the platform for unauthorized commercial purposes</li>
+              <li><strong>Multiple accounts</strong> - One account per person to maintain community integrity</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold mb-3">Community Standards:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Be genuine</strong> - Represent yourself honestly and authentically</li>
+              <li><strong>Be helpful</strong> - Share knowledge and assist fellow community members when appropriate</li>
+              <li><strong>Be reliable</strong> - Follow through on commitments and arrangements</li>
+              <li><strong>Be patient</strong> - Understand that finding compatible matches may take time</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">5. Privacy and Data Handling</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">StreamShare Club explicitly DOES NOT:</strong>
+              Your privacy is important to us. Our data collection and usage practices are detailed in our Privacy Policy, which forms part of these Terms. Key points include:
             </p>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Financial Services</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>❌ Process, handle, or manage any payments for subscriptions</li>
-                <li>❌ Act as escrow, payment processor, or financial intermediary</li>
-                <li>❌ Collect, transfer, or distribute funds between members</li>
-                <li>❌ Provide financial advice or financial planning services</li>
-                <li>❌ Operate as a money service business or financial institution</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Subscription Services</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>❌ Sell, resell, or distribute digital subscriptions</li>
-                <li>❌ Provide access to Netflix, Disney+, or any streaming platform</li>
-                <li>❌ Manage, store, or transmit login credentials</li>
-                <li>❌ Act as authorized reseller or distributor for any service</li>
-                <li>❌ Facilitate or coordinate subscription account sharing</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Business Operations</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>❌ Broker arrangements between members</li>
-                <li>❌ Mediate disputes or conflicts between community members</li>
-                <li>❌ Guarantee outcomes of member interactions</li>
-                <li>❌ Provide customer service for third-party platforms</li>
-                <li>❌ Monitor or moderate private member communications</li>
-              </ul>
-            </div>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Minimal data collection</strong> - We collect only essential information for platform functionality</li>
+              <li><strong>No streaming credentials</strong> - We never collect or store streaming service login information</li>
+              <li><strong>Geographic matching</strong> - Location data used only for member matching purposes</li>
+              <li><strong>Communication facilitation</strong> - Telegram integration for community access and communication</li>
+            </ul>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">4. MEMBER INDEPENDENCE AND RESPONSIBILITY</h2>
+          <section>
+            <h2 className="text-2xl font-bold mb-4">6. Fees and Payment Terms</h2>
             
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Complete Member Autonomy:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>All member interactions are independent personal decisions</li>
-                <li>Any arrangements made between members are private contracts</li>
-                <li>Members act solely on their own behalf and at their own risk</li>
-                <li>StreamShare Club has no involvement in member agreements</li>
-                <li>All financial arrangements are between individual members only</li>
-              </ul>
-            </div>
+            <h3 className="text-xl font-semibold mb-3">Platform Access Fees:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Monthly membership</strong> - Fee for access to community matching platform and features</li>
+              <li><strong>Payment processing</strong> - Payments handled securely through authorized payment processors</li>
+              <li><strong>No streaming payments</strong> - Platform fees are separate from any arrangements between members</li>
+              <li><strong>Refund policy</strong> - Detailed refund terms available upon request</li>
+            </ul>
 
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Member Responsibilities:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Comply with all applicable laws and regulations</li>
-                <li>Respect third-party platform terms of service</li>
-                <li>Make independent decisions about all arrangements</li>
-                <li>Handle all personal financial matters independently</li>
-                <li>Maintain respectful behavior in community spaces</li>
-              </ul>
+            <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6">
+              <p className="text-sm"><strong>Important:</strong> Platform membership fees are for community access only and do not include streaming service subscriptions or guarantees of successful matches.</p>
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">5. COMMUNITY GUIDELINES</h2>
+          <section>
+            <h2 className="text-2xl font-bold mb-4">7. Platform Disclaimers and Limitations</h2>
             
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Acceptable Use:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Respectful discussion of cost-saving strategies</li>
-                <li>Sharing educational content about subscription optimization</li>
-                <li>Networking with like-minded community members</li>
-                <li>Participating in financial literacy discussions</li>
-                <li>Geographic networking for local connections</li>
-              </ul>
-            </div>
+            <h3 className="text-xl font-semibold mb-3">Service Availability:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Geographic limitations</strong> - Service may not be available in all regions</li>
+              <li><strong>Platform maintenance</strong> - Temporary service interruptions for updates and maintenance</li>
+              <li><strong>Third-party dependencies</strong> - Reliance on Telegram and other third-party services</li>
+              <li><strong>Member availability</strong> - Matching success depends on active member participation</li>
+            </ul>
 
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Prohibited Activities:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Sharing login credentials or account information</li>
-                <li>Soliciting or facilitating terms of service violations</li>
-                <li>Impersonating other members or providing false information</li>
-                <li>Harassment, spam, or disruptive behavior</li>
-                <li>Commercial promotion without permission</li>
+            <h3 className="text-xl font-semibold mb-3">Liability Limitations:</h3>
+            <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-6">
+              <p className="text-sm leading-relaxed">
+                <strong>IMPORTANT LEGAL NOTICE:</strong> StreamShare Club provides a networking platform only. We are not liable for:
+              </p>
+              <ul className="list-disc list-inside text-sm mt-2 space-y-1">
+                <li>Disputes between members or sharing arrangement outcomes</li>
+                <li>Violations of streaming platform terms by members</li>
+                <li>Financial losses related to member arrangements</li>
+                <li>Changes to streaming platform policies or pricing</li>
+                <li>Technical issues with third-party streaming services</li>
               </ul>
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">6. PRIVACY AND DATA PROTECTION</h2>
+          <section>
+            <h2 className="text-2xl font-bold mb-4">8. Third-Party Platform Compliance</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Members must independently ensure their sharing arrangements comply with the terms of service of streaming platforms including but not limited to:
+            </p>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Netflix</strong> - Household sharing and geographic restrictions</li>
+              <li><strong>Disney+</strong> - Account sharing policies and regional limitations</li>
+              <li><strong>Amazon Prime Video</strong> - Household member definitions and sharing rules</li>
+              <li><strong>HBO Max/Discovery+</strong> - User limits and geographic restrictions</li>
+              <li><strong>Other platforms</strong> - Any additional streaming services and their respective terms</li>
+            </ul>
             
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Minimal Data Collection:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Telegram username/ID for community access</li>
-                <li>Geographic region for appropriate community matching</li>
-                <li>Optional email for account recovery purposes only</li>
-                <li>Payment information for community membership fees only</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Data Protection:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>No storage of financial or credential information</li>
-                <li>No monitoring of private member communications</li>
-                <li>Geographic data used only for community matching</li>
-                <li>All data deleted within 30 days of account termination</li>
-                <li>No sharing of member data with third parties</li>
-              </ul>
+            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-6">
+              <p className="text-sm"><strong>Member Responsibility:</strong> It is the responsibility of each member to understand and comply with the terms of service of any streaming platforms they choose to share. StreamShare Club does not monitor or enforce compliance with third-party terms.</p>
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">7. COMMUNITY MEMBERSHIP FEES</h2>
+          <section>
+            <h2 className="text-2xl font-bold mb-4">9. Community Management and Moderation</h2>
             
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Platform Access Fee:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Monthly subscription for community platform access</li>
-                <li>Payment covers community management, bot maintenance, and platform costs</li>
-                <li>Fees are for community membership only, not for any subscription services</li>
-                <li>No refunds for community access fees once services are provided</li>
-                <li>Membership can be cancelled at any time with 7-day notice</li>
-              </ul>
-            </div>
+            <h3 className="text-xl font-semibold mb-3">Moderation Approach:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Community-driven</strong> - Emphasis on self-moderation and member reporting</li>
+              <li><strong>Educational focus</strong> - Priority on education about legal sharing practices</li>
+              <li><strong>Responsive support</strong> - Active response to reported issues and disputes</li>
+              <li><strong>Fair enforcement</strong> - Consistent application of community guidelines</li>
+            </ul>
 
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Fee Structure:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Standard membership fees are clearly disclosed during signup</li>
-                <li>All fees are for community platform access and management</li>
-                <li>No additional fees for introductions or networking services</li>
-                <li>Payment processing handled by standard payment processors</li>
-              </ul>
-            </div>
+            <h3 className="text-xl font-semibold mb-3">Enforcement Actions:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li><strong>Warnings</strong> - First-time violations typically receive educational warnings</li>
+              <li><strong>Temporary suspension</strong> - Serious or repeated violations may result in temporary access suspension</li>
+              <li><strong>Permanent removal</strong> - Severe violations or continued non-compliance may result in permanent removal</li>
+              <li><strong>Legal cooperation</strong> - Cooperation with law enforcement when required by applicable laws</li>
+            </ul>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">8. DISCLAIMER OF LIABILITY</h2>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Platform Limitations:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>StreamShare Club is a social networking platform only</li>
-                <li>We provide no warranties about member interactions or outcomes</li>
-                <li>All member activities are independent and at their own risk</li>
-                <li>We are not responsible for third-party platform policies or changes</li>
-                <li>No liability for member disputes or arrangement failures</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Maximum Liability:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Our total liability is limited to the amount of your most recent monthly membership fee</li>
-                <li>We disclaim all warranties, express or implied</li>
-                <li>Members assume all risks of community participation</li>
-                <li>No liability for indirect, consequential, or punitive damages</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">9. THIRD-PARTY PLATFORMS</h2>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">No Affiliation:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>StreamShare Club is not affiliated with Netflix, Disney+, or any streaming service</li>
-                <li>We do not represent or act on behalf of any subscription platform</li>
-                <li>All third-party trademarks are property of their respective owners</li>
-                <li>Members must comply with all third-party terms of service independently</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Platform Changes:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>We are not responsible for changes to third-party platform policies</li>
-                <li>Community discussions may become outdated due to platform updates</li>
-                <li>Members must stay informed about relevant platform terms</li>
-                <li>No guarantees about continued availability of cost-saving strategies</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">10. COMMUNITY MANAGEMENT</h2>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Automated Systems:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Bots handle routine community management tasks</li>
-                <li>Automated matching based on geographic preferences</li>
-                <li>Automated member verification for community access</li>
-                <li>No human intervention in private member communications</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Community Standards:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Respectful behavior required at all times</li>
-                <li>Educational and networking focus maintained</li>
-                <li>No tolerance for harassment or disruptive behavior</li>
-                <li>Violations may result in community access termination</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">11. INTELLECTUAL PROPERTY</h2>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Platform Rights:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>All StreamShare Club branding, logos, and technology are our property</li>
-                <li>Community platform code and systems are proprietary</li>
-                <li>Members may not reproduce or distribute our technology</li>
-                <li>Fair use allowed for educational and discussion purposes</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Member Content:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Members retain rights to their own contributed content</li>
-                <li>By participating, members grant us license to use content for community purposes</li>
-                <li>No commercial use of member content without explicit permission</li>
-                <li>Members responsible for ensuring they have rights to shared content</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">12. TERMINATION</h2>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Voluntary Termination:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Members may cancel community access at any time</li>
-                <li>7-day notice required for membership cancellation</li>
-                <li>Access ends immediately upon cancellation</li>
-                <li>No refunds for unused membership periods</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Involuntary Termination:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Violations of community guidelines may result in termination</li>
-                <li>Disruptive behavior or harassment grounds for removal</li>
-                <li>Immediate termination for illegal activities</li>
-                <li>No refunds for terminated memberships</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">13. LEGAL COMPLIANCE</h2>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Regulatory Compliance:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>StreamShare Club operates as a legitimate social networking platform</li>
-                <li>Full compliance with applicable data protection laws</li>
-                <li>Adherence to platform terms of service requirements</li>
-                <li>No facilitation of illegal activities</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Dispute Resolution:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>All disputes resolved through binding arbitration</li>
-                <li>Arbitration conducted under Indian Arbitration and Conciliation Act</li>
-                <li>English language proceedings with Indian legal standards</li>
-                <li>Individual arbitration only, no class actions permitted</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">14. GEOGRAPHIC OPERATIONS</h2>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Regional Communities:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Community matching based on geographic regions</li>
-                <li>Compliance with local laws and regulations</li>
-                <li>Regional community standards may vary</li>
-                <li>No operations in prohibited jurisdictions</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">International Considerations:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Members responsible for compliance with local laws</li>
-                <li>Platform terms subject to Indian jurisdiction</li>
-                <li>Cross-border interactions at member discretion</li>
-                <li>No legal advice provided for international compliance</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">15. MODIFICATIONS AND UPDATES</h2>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Terms Updates:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Terms may be updated with 30-day notice</li>
-                <li>Continued use constitutes acceptance of updated terms</li>
-                <li>Major changes will be prominently announced</li>
-                <li>Members may terminate if they disagree with updates</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Platform Evolution:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Community features may be added or modified</li>
-                <li>Core community networking purpose will remain consistent</li>
-                <li>No obligation to maintain specific features indefinitely</li>
-                <li>Members notified of significant platform changes</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">16. CONTACT AND SUPPORT</h2>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Community Support:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Support provided for community platform issues only</li>
-                <li>No support for third-party platform problems</li>
-                <li>Response times vary based on inquiry complexity</li>
-                <li>Support available through Telegram and designated channels</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Legal Contact:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>All legal notices must be sent via registered mail</li>
-                <li>Include specific platform terms and policy references</li>
-                <li>Allow reasonable time for response and resolution</li>
-                <li>Informal resolution preferred before formal proceedings</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">17. SEVERABILITY AND INTERPRETATION</h2>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Terms Interpretation:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>If any provision is found unenforceable, remainder remains valid</li>
-                <li>Terms interpreted under Indian law and jurisdiction</li>
-                <li>English language version controls in case of translation differences</li>
-                <li>Headings are for convenience only and do not affect interpretation</li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground">Entire Agreement:</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>These terms constitute the complete agreement between parties</li>
-                <li>No modifications except through written platform updates</li>
-                <li>Previous agreements or communications superseded by these terms</li>
-                <li>No waiver of rights unless explicitly stated in writing</li>
-              </ul>
-            </div>
-          </section>
-
-          <div className="mt-16 pt-8 border-t border-border bg-gradient-to-r from-accent/10 to-red-400/10 p-6 rounded-lg">
-            <p className="text-foreground font-semibold mb-4">
-              <strong>IMPORTANT NOTICE:</strong> StreamShare Club is exclusively a community networking platform. We facilitate introductions and discussions only. All arrangements between members are independent personal decisions. We provide no subscription services, handle no payments for subscriptions, and take no responsibility for member activities outside our community platform.
+          <section>
+            <h2 className="text-2xl font-bold mb-4">10. Intellectual Property</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong>Platform Content:</strong> All content on the StreamShare Club platform, including but not limited to text, graphics, logos, and software, is the property of StreamShare Club or our licensors and is protected by intellectual property laws.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong>Member Content:</strong> Members retain ownership of content they share on the platform but grant StreamShare Club a license to use such content for platform operation and improvement.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">By using StreamShare Club, you acknowledge that you understand we are solely a social networking platform and that all your interactions with other members are independent personal decisions made at your own discretion and risk.</strong>
+              <strong>Third-Party Trademarks:</strong> References to streaming platform names and logos are for identification purposes only and do not imply endorsement or affiliation.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">11. Account Termination</h2>
+            
+            <h3 className="text-xl font-semibold mb-3">Voluntary Termination:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li>Members may cancel their accounts at any time through platform settings</li>
+              <li>Cancellation takes effect at the end of the current billing period</li>
+              <li>Access to community features ceases upon cancellation</li>
+              <li>Personal data deletion handled according to Privacy Policy terms</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold mb-3">Involuntary Termination:</h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              StreamShare Club reserves the right to terminate accounts for violations of these Terms, including but not limited to fraudulent activity, harassment, or repeated violations of community guidelines.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">12. Legal Compliance and Jurisdiction</h2>
+            
+            <h3 className="text-xl font-semibold mb-3">Applicable Law:</h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              These Terms are governed by Indian law and any disputes will be subject to the jurisdiction of Indian courts.
+            </p>
+
+            <h3 className="text-xl font-semibold mb-3">International Compliance:</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+              <li>Members must comply with all applicable local laws in their jurisdiction</li>
+              <li>Platform operations adapt to meet legal requirements in different regions</li>
+              <li>Service may be restricted or unavailable in certain jurisdictions</li>
+              <li>Legal cooperation provided when required by applicable laws</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">13. Geographic Operations</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              <strong>Primary Operations:</strong> StreamShare Club operates primarily in India but serves an international community. Regional variations in service availability, features, and pricing may apply based on local regulations and market conditions.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              <strong>Regional Adaptation:</strong> Service features and availability may be modified to comply with local laws and streaming platform policies in different geographic regions.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">14. Modifications to Terms</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              StreamShare Club reserves the right to modify these Terms at any time. Material changes will be communicated to members via email and platform notifications at least 30 days before taking effect.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Continued use of the platform after changes take effect constitutes acceptance of the modified Terms.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">15. Contact Information</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              For questions about these Terms or platform-related issues:
+            </p>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-6">
+              <li><strong>General Support:</strong> support@streamshareclub.com</li>
+              <li><strong>Legal Inquiries:</strong> legal@streamshareclub.com</li>
+              <li><strong>Telegram Support:</strong> @StreamShareSupport</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">16. Severability</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              If any provision of these Terms is found to be unenforceable or invalid, the remaining provisions will continue to be valid and enforceable to the fullest extent permitted by law.
+            </p>
+          </section>
+
+          <div className="bg-accent/10 border border-accent/20 rounded-lg p-8 mt-12">
+            <h3 className="text-xl font-bold mb-4">Important Notice</h3>
+            <p className="text-sm leading-relaxed mb-4">
+              <strong>STREAMSHARE CLUB IS A COMMUNITY NETWORKING PLATFORM ONLY.</strong> We facilitate connections between individuals interested in legal cost-sharing of streaming services. We do not provide, manage, or guarantee streaming service access or subscriptions.
+            </p>
+            <p className="text-sm leading-relaxed">
+              All arrangements between members are independent personal decisions. Members are responsible for ensuring their arrangements comply with applicable streaming platform terms and local laws.
             </p>
           </div>
 
-          <div className="mt-16 pt-8 border-t border-border text-center">
-            <p className="text-muted-foreground mb-4">
-              <em>Contact: support@streamshareclub.com</em>
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Last updated: July 12, 2025
+          <div className="text-center mt-12 pt-8 border-t border-border">
+            <p className="text-muted-foreground">
+              <strong>Contact:</strong> support@streamshareclub.com<br />
+              <strong>Last Updated:</strong> July 12, 2025
             </p>
           </div>
+
         </div>
       </main>
     </div>

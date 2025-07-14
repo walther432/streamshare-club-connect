@@ -25,18 +25,11 @@ const Footer = () => {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Join thousands of users who are already saving money on their streaming subscriptions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button 
                 size="lg" 
                 className="btn-premium text-lg px-8 py-4 font-semibold"
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Join Now for $3.99
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-lg px-8 py-4 font-semibold border-border hover:bg-secondary"
               >
                 Start Matching
               </Button>
